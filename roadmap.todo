@@ -35,7 +35,7 @@ Criação de Componente contato:
     ✔ Criar componente components/Contato @done(21-08-30 10:56)
     ✔ Utilizar como componente com componente uma das sections contidas na main do lista-de-contatos.component.html @done(21-08-30 10:57)
     ✔ Utilizar o css apropriado para esse componente. @started(21-08-30 11:04) @done(21-08-30 11:04) @lasted(16s)
-    ☐ Reescrever o html do componente lista de contatos para exibir uma ou duas dezenas de app-contato
+    ✔ Reescrever o html do componente lista de contatos para exibir uma ou duas dezenas de app-contato @done(21-08-30 11:16)
 
 Fazendo que os contatos sejam mais dinâmicos:
     ☐ Crie uma pasta model dentro da pastas src/app
