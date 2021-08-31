@@ -1,2 +1,3 @@
-<app-menu></app-menu>
+<app-menu (onAddContato) = "funcao()"></app-menu>
 <app-lista-de-contato></app-lista-de-contato>
+<app-create-contato *ngIf="mostrandoModal"></app-create-contato>
