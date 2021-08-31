@@ -19,7 +19,7 @@ Criação de Menu:
     O conteúdo de menu.component.html dele deve ser o do elemento nav contida em https://github.com/sergiomoura/contatos-html-template/blob/main/home.html
     ✔ Adicione esse componente ao app.component.html @done(21-08-30 10:42)
     ✔ Dê estilo a ele baseado no css https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-30 10:42)
-    - *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)*
+    ✔ *Observe que o link para sair do sistema não está aparecendo corretamente (exit_to_app)* @done(21-08-31 15:38)
     ✔ Importe as fontes do material icon fonts para o seu projeto adicionando a linha de código no index.html @done(21-08-30 10:47)
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     ✔ Verifique se o menu aparece corretamente. @done(21-08-30 10:47)
@@ -61,15 +61,15 @@ Criação e Exibição do componente que adiciona/cria um novo contato:
     ✔ Estruture o template dele com base no https://github.com/sergiomoura/contatos-html-template/blob/main/home.html @done(21-08-31 10:42)
     ✔ Estilize ele com base nos seletores #modal do arquivo https://github.com/sergiomoura/contatos-html-template/blob/main/css/home.css @done(21-08-31 10:42)
     Fazendo com que o componente comece "escondido":
-        ☐ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false
-        ☐ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf)
+        ✔ Crie uma propriedade mostrandoCreateContato no componente app.component.ts e atribua a ela false @done(21-08-31 15:38)
+        ✔ Marque app-create-contato para que ele só seja exibido se o mostrandoCreateContato seja true (Dica: *ngIf) @done(21-08-31 15:38)
     Fazendo com que ele seja exibido quando o menu seja clicado:
-        ☐ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado.
-        ☐ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick
-        ☐ No app.component.html associe o evento emitido à execução de uma função mostrarModal.
+        ✔ No MenuComponent.ts crie uma função mostrarModalClick que seja executada toda vez que o item "Adicionar Contato" seja clicado. @done(21-08-31 15:38)
+        ✔ Crie um emissor de evento e faça com que ele emita um evento na função mostrarModalClick @done(21-08-31 15:38)
+        ✔ No app.component.html associe o evento emitido à execução de uma função mostrarModal. @done(21-08-31 15:38)
            Essa função, definida no AppComponent, deve alterar o valor do atributo mostrandoCreateContato para true;
     Fazendo com que ele seja escondido quando o cancelar seja clicado:
-        ☐ ... escreva aqui os passos ... análogos ao do item anterior.
+        ✔ ... escreva aqui os passos ... análogos ao do item anterior. @done(21-08-31 15:38)
 
 
 

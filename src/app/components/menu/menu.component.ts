@@ -8,18 +8,13 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 export class MenuComponent implements OnInit {
   @Output() onAddContato:EventEmitter<null> = new EventEmitter();
 
-  @Output() onRemoveModal:EventEmitter<null> = new EventEmitter();
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
   mostrandoModalClick() {
-    console.log("Click");
     this.onAddContato.emit();
   }
-
-
 
 }

@@ -9,7 +9,11 @@ export class AppComponent {
   title = 'contatos';
   mostrandoModal = false;
 
-  funcao() {
+  mostrarModal() {
     this.mostrandoModal = true;
+  }
+
+  fecharModal(){
+    this.mostrandoModal = false;
   }
 }
