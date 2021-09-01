@@ -2,26 +2,28 @@
   <form>
       <label>
           Nome:
-          <input type="text" name="nome" id="nome">
+          <input type="text" name="nome" id="nome" [(ngModel)] = "novoContato.nome">
       </label>
       <label>
           E-mail:
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" [(ngModel)] = "novoContato.email">
       </label>
       <label>
           Telefone:
-          <div>
-              <input type="email" name="email" id="email">
-              <a href=""><i class="material-icons">add_circle</i></a>
+          <div *ngFor="let tel of novoContato.telefone; let i = index; trackById: track">
+              <input type="tel" name="telefone_{{i}}" [(ngModel)] = "novoContato.telefone[i]">
+              <a *ngIf = "i == 0"><i class="material-icons">add_circle</i></a>
+              <a class="remove"  *ngIf = "i != 0"><i class="material-icons">remove_circle</i></a>
+
           </div>
-          <div>
-              <input type="email" name="email" id="email">
+          <!-- <div>
+              <input  type="tel" name="tel" id="tel2">
               <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
           </div>
           <div>
-              <input type="email" name="email" id="email">
+              <input  type="tel" name="tel" id="tel3">
               <a class="remove" href=""><i class="material-icons">remove_circle</i></a>
-          </div>
+          </div> -->
       </label>
       <div class="controles">
           <button class="link" (click)="cancelar()" type="button">Cancelar</button>

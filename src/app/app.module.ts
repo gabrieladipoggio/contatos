@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListaDeContatoComponent } from './components/lista-de-contato/lista-de-contato.component';
@@ -18,7 +18,8 @@ import { CreateContatoComponent } from './components/create-contato/create-conta
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
