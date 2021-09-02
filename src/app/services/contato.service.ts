@@ -1,56 +1,34 @@
 import { Injectable } from '@angular/core';
 import {Contato} from '../../app/models/Contato'
 
-  const BASE_DE_CONTATOS:Contato[] = [
-    {
-      nome: "Teste 1",
-
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },
-    {
-      nome: "Teste 2",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },
-    {
-      nome: "Teste 3",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },{
-      nome: "Teste 4",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },
-    {
-      nome: "Teste 5",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },
-    {
-      nome: "Teste 6",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    },{
-      nome: "Teste 7",
-      email:"teste@teste.com",
-      telefone:["123413", "1231234"]
-    }
-  ]
-
+const BASE_DE_CONTATOS:Contato[] = []
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContatoService {
-  constructor() { }
+  private baseDeContatos:Contato[];
+  private chave:string = "CONTATOS"
+
+
+  constructor() {
+    let dados = window.localStorage.getItem(this.chave);
+    if(dados){
+      this.baseDeContatos = JSON.parse(dados)
+    } else {
+      window.localStorage.setItem(this.chave, "[]");
+      this.baseDeContatos = []
+    }
+   }
 
   getContatos():Contato[]{
-    return BASE_DE_CONTATOS
+    return this.baseDeContatos
   }
 
   addContatos(c:Contato):void{
-    BASE_DE_CONTATOS.push(c)
+    this.baseDeContatos.push(c);
+    window.localStorage.setItem(this.chave, JSON.stringify(this.baseDeContatos
+    ))
   }
 
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
 import {Contato} from 'src/app/models/Contato'
-
+import { ContatoService } from 'src/app/services/contato.service';
 
 @Component({
   selector: 'app-create-contato',
@@ -13,9 +13,10 @@ export class CreateContatoComponent implements OnInit {
   novoContato:Contato = {
     nome: "",
     email:"",
-    telefone: ["113", "123", "133"]
+    telefone: ["113"]
   };
 
+  cs:ContatoService = new ContatoService();
 
   constructor() {}
 
@@ -24,9 +25,10 @@ export class CreateContatoComponent implements OnInit {
     this.onCancelarClick.emit();
   }
 
-  track(index:number, value:string){
-    return index
+  track(index:number, value:any){
+    return index;
   }
+
 
   ngOnInit(): void {
   }
@@ -36,5 +38,20 @@ export class CreateContatoComponent implements OnInit {
   }
 
   removeTelefone(pos:number):void {
-    this.novoContato.telefone.splice(pos,1)  }
+    this.novoContato.telefone.splice(pos,1)
+  }
+
+  salvar(){
+    this.cs.addContatos(this.novoContato);
+
+    // Fechar o modal
+   // this.onCancelarClick.emit();
+
+   // Limpar os campos
+   this.novoContato={
+     nome: "",
+     email:"",
+     telefone:[""]
+   }
+  }
 }
