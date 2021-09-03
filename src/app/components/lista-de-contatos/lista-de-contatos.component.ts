@@ -14,9 +14,12 @@ export class ListaDeContatosComponent implements OnInit {
 
   constructor() {
     this.contatos = this.cs.getContatos();
+    ContatoService.onContatoChange.subscribe((contatos) => {
+      this.contatos = contatos
+    })
   }
 
   ngOnInit(): void {
-  }  
+  }
 
 }
