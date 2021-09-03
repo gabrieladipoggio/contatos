@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {Contato} from '../../models/Contato'
+import { Component, Input, OnInit } from '@angular/core';
+import { Contato } from 'src/app/models/Contato';
 
 @Component({
   selector: 'app-contato',
@@ -7,6 +7,7 @@ import {Contato} from '../../models/Contato'
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent implements OnInit {
+
   @Input() registro!:Contato;
 
   constructor() { }
